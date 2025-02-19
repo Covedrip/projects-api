@@ -1,5 +1,6 @@
 require('dotenv').config({ path: `${process.cwd()}/.env` });
 const express = require('express');
+const cors = require('cors');
 
 const authRouter = require('./route/authRoute');
 const projectRouter = require('./route/projectRoute');
@@ -11,6 +12,13 @@ const globalErrorHandler = require('./controller/errorController');
 const app = express();
 
 app.use(express.json());
+
+//enable cors
+app.use(cors({
+    origin: '*', 
+    methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 // all routes will be here
 app.use('/api/auth', authRouter);
