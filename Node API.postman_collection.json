@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "352bfa21-0777-47ee-b838-c4e446837a27",
+		"name": "Node API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38587476"
+	},
+	"item": [
+		{
+			"name": "projects",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5OTU3NzAzLCJleHAiOjE3NDc3MzM3MDN9.Eja3kN-ZNGZApKINJmbQI-DP1rWSI9BDyg_z1lzSjVs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Attendance management\",\r\n    \"productImage\": [\"https://picsum.photos/id/1/200/300\"],\r\n    \"price\": 25.0,\r\n    \"shortDescription\": \"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit\",\r\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales lacinia leo et viverra. Quisque congue turpis id arcu lobortis accumsan id sit amet magna. Vestibulum vehicula ullamcorper est, condimentum ullamcorper neque luctus vitae. Donec venenatis porttitor erat, vitae accumsan lectus tincidunt sit amet.\",\r\n    \"productUrl\": \"https://academybugs.com/\",\r\n    \"category\": [\"nojeJs\"],\r\n    \"tags\": [\"backend\", \"express\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/projects/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"projects",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getprojectbyid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5OTU3NzAzLCJleHAiOjE3NDc3MzM3MDN9.Eja3kN-ZNGZApKINJmbQI-DP1rWSI9BDyg_z1lzSjVs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/projects/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"projects",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5OTU3NzAzLCJleHAiOjE3NDc3MzM3MDN9.Eja3kN-ZNGZApKINJmbQI-DP1rWSI9BDyg_z1lzSjVs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"title\": \"Updated Attendance management\",\r\n        \"isFeatured\": false,\r\n        \"productImage\": [\r\n            \"https://picsum.photos/id/1/200/300\"\r\n        ],\r\n        \"price\": \"25\",\r\n        \"shortDescription\": \"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit\",\r\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales lacinia leo et viverra. Quisque congue turpis id arcu lobortis accumsan id sit amet magna. Vestibulum vehicula ullamcorper est, condimentum ullamcorper neque luctus vitae. Donec venenatis porttitor erat, vitae accumsan lectus tincidunt sit amet.\",\r\n        \"productUrl\": \"https://academybugs.com/\",\r\n        \"category\": [\r\n            \"nojeJs\"\r\n        ],\r\n        \"tags\": [\r\n            \"backend\",\r\n            \"express\"\r\n        ]\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/projects/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"projects",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5OTU3NzAzLCJleHAiOjE3NDc3MzM3MDN9.Eja3kN-ZNGZApKINJmbQI-DP1rWSI9BDyg_z1lzSjVs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"title\": \"Updated Attendance management\",\r\n        \"isFeatured\": false,\r\n        \"productImage\": [\r\n            \"https://picsum.photos/id/1/200/300\"\r\n        ],\r\n        \"price\": \"25\",\r\n        \"shortDescription\": \"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit\",\r\n        \"description\": \"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales lacinia leo et viverra. Quisque congue turpis id arcu lobortis accumsan id sit amet magna. Vestibulum vehicula ullamcorper est, condimentum ullamcorper neque luctus vitae. Donec venenatis porttitor erat, vitae accumsan lectus tincidunt sit amet.\",\r\n        \"productUrl\": \"https://academybugs.com/\",\r\n        \"category\": [\r\n            \"nojeJs\"\r\n        ],\r\n        \"tags\": [\r\n            \"backend\",\r\n            \"express\"\r\n        ]\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/projects/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"projects",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userType\": \"1\",\r\n    \"firstName\": \"Taku\",\r\n    \"lastName\": \"Dube\",\r\n    \"email\": \"tak@gmail.com\",\r\n    \"password\": \"12346789\",\r\n    \"confirmPassword\":\"12346789\"\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/signup/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signup",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM5OTU3NzAzLCJleHAiOjE3NDc3MzM3MDN9.Eja3kN-ZNGZApKINJmbQI-DP1rWSI9BDyg_z1lzSjVs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"taku@gmail.com\",\r\n    \"password\": \"12346789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "getuser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzM5OTYwOTYyLCJleHAiOjE3NDc3MzY5NjJ9.H267NufydvwPWHJCHwnFpt2Ivl8Wf_62N2y_slam3yo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

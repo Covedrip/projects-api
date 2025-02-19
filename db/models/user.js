@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 
 const sequelize = require('../../config/database');
 const AppError = require('../../utils/appError');
-const project = require('./project');
+const project = require('./project')
 
 const user = sequelize.define(
     'user',

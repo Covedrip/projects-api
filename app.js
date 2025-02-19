@@ -13,9 +13,9 @@ const app = express();
 app.use(express.json());
 
 // all routes will be here
-app.use('/api/v1/auth', authRouter);
-app.use('/api/v1/projects', projectRouter);
-app.use('/api/v1/users', userRouter);
+app.use('/api/auth', authRouter);
+app.use('/api/projects', projectRouter);
+app.use('/api/users', userRouter);
 
 app.use(
     '*',
