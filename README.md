@@ -20,9 +20,11 @@ POST /login - Authenticate and get a JWT token
 User Routes (/api/users)
 GET / - Get all users
 
-
 Project Routes (/api/projects)
 POST / - Create a new projects
 GET / - Get all projects
 PATCH /:id - Update a project
 DELETE /:id - Delete a project
+
+To authorise the jwt token returned on login has to be added to Postman Bearer Token inorder to perfom CRUD functionalities.
+To view users the admin token must be added to the Postmann Bearer Token
